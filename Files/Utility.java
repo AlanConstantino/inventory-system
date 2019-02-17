@@ -2,14 +2,14 @@ import java.io.*;
 import java.util.*;
 
 public class Utility{
-  public static void checkCommand(String input, LinkedList<Movie> list, Queue<Customer> queue) {
-      switch(input){
+	public static void checkCommand(String input, LinkedList<Movie> list, Queue<Customer> queue) {
+		switch(input){
 			case "h":
 			case "H":
-        System.out.println();
-        Collections.sort(list);
-        Commands.help();
-        break;
+				System.out.println();
+				Collections.sort(list);
+				Commands.help();
+				break;
 
 			case "i":
 			case "I":
@@ -78,9 +78,9 @@ public class Utility{
 				System.out.println("'" + input + "' is not a valid input, try again."); break;
 		}
 	}
-
+	
 	public static String[] restoreHelper(File file, Scanner readFile){
-    String[] sArr = new String[3];
+		String[] sArr = new String[3];
 
 		try{
       String line = readFile.nextLine();
