@@ -1,50 +1,50 @@
 public class Customer{
-   private String firstName;
-   private String lastName;
-   private String phone;
+	private String firstName;
+	private String lastName;
+	private String phone;
+	
+	public Customer(String firstName, String lastName, String phone){
+		this.firstName = firstName;
+      		this.lastName = lastName;
+      		this.phone = phone;
+   	}
+	
+   	public String getFirstName(){
+      		return firstName;
+  	}
 
-   public Customer(String firstName, String lastName, String phone){
-      this.firstName = firstName;
-      this.lastName = lastName;
-      this.phone = phone;
-   }
+   	public String getLastName(){
+      		return lastName;
+   	}
 
-	public String getFirstName(){
-      return firstName;
-   }
+   	public String getPhone(){
+      		return phone;
+   	}
 
-   public String getLastName(){
-      return lastName;
-   }
+   	public void setPhone(String phone){
+  		this.phone = phone;
+   	}
 
-   public String getPhone(){
-      return phone;
-   }
+   	public void setFirstName(String firstName){
+  	   	this.firstName = firstName;
+   	}
 
-   public void setPhone(String phone){
-  	   this.phone = phone;
-   }
+   	public void setLastName(String lastName){
+  	   	this.lastName = lastName;
+   	}
 
-   public void setFirstName(String firstName){
-  	   this.firstName = firstName;
-   }
+   	public String toString(){
+      		return firstName + "|" + lastName + "|" + phone + "|";
+   	}
 
-   public void setLastName(String lastName){
-  	   this.lastName = lastName;
-   }
+   	public static Customer createCustomer(){
+      		System.out.print("Enter the customer's first name: ");
+      		String firstName = Utility.fetchUserInput();
+      		System.out.print("Enter the customer's last name: ");
+      		String lastName = Utility.fetchUserInput();
+      		System.out.print("Enter customer's phone number: ");
+      		String phone = Utility.fetchUserInput();
 
-   public String toString(){
-      return firstName + "|" + lastName + "|" + phone + "|";
-   }
-
-   public static Customer createCustomer(){
-      System.out.print("Enter the customer's first name: ");
-      String firstName = Utility.fetchUserInput();
-      System.out.print("Enter the customer's last name: ");
-      String lastName = Utility.fetchUserInput();
-      System.out.print("Enter customer's phone number: ");
-      String phone = Utility.fetchUserInput();
-
-      return new Customer(firstName, lastName, phone);
-  }
+      		return new Customer(firstName, lastName, phone);
+  	}
 }
