@@ -14,6 +14,9 @@ Robocop|238|0|
 Rocky|0|0|
 Schindler's List|24|75|
 Taxi Driver|98|0|
+Test|30|67|
+Test2|0|40|
+Test3|0|590|
 The Godfather|96|0|
 The Godfather Part II|-1|100|
-The Wizard Of Oz|99|0|
+The Wizard of Oz|32|98|
