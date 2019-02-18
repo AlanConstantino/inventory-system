@@ -117,19 +117,6 @@ public class Utility{
 		}
 	}
 
-	public static Customer createCustomer(){
-		System.out.print("Enter the customer's first name: ");
-      String firstName = fetchUserInput();
-
-      System.out.print("Enter the customer's last name: ");
-   	String lastName = fetchUserInput();
-
-   	System.out.print("Enter customer's phone number: ");
-   	String phone = fetchUserInput();
-
-   	return new Customer(firstName, lastName, phone);
-  }
-
   public static String fetchUserInput(){
 	   Scanner read = new Scanner(System.in);
 	   return read.nextLine();
