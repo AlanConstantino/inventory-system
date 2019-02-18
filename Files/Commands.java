@@ -145,7 +145,7 @@ public class Commands{
             Movie movie = iter.next();
 
             if(movie.getHave() == 0)
-               writer.printf("| %2d | %-44s | %-6s | %-20s |\n", count++, movie.getName(), movie.getWant(), dtf.format(LocalDateTime.now()));
+               writer.printf("| %3d | %-44s | %-6s | %-20s |\n", count++, movie.getName(), movie.getWant(), dtf.format(LocalDateTime.now()));
 		   }
 
          Display.writeLineSeparator(writer);
