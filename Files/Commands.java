@@ -17,7 +17,7 @@ public class Commands{
 
 		while(iter.hasNext()){
          Movie movie = iter.next();
-			String movieName = movie.getName();
+			   String movieName = movie.getName();
 
          if(movieName.equals(input)){
             inputIsValid = false;

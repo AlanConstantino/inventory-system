@@ -14,48 +14,48 @@ public class Utility{
 
 			case "i":
 			case "I":
-        		Commands.inquire(list);
-        		break;
+        Commands.inquire(list);
+        break;
 
 			case "l":
 			case "L":
-       		Commands.listAlphabetically(list);
-       		break;
+       	Commands.listAlphabetically(list);
+       	break;
 
 			case "a":
 			case "A":
-        		Commands.add(list);
-        		break;
+        Commands.add(list);
+        break;
 
       	case "d":
       	case "D":
-        		Commands.delete(list);
-        		break;
+        Commands.delete(list);
+        break;
 
 			case "m":
 			case "M":
-        		Commands.modify(list);
-        		break;
+        Commands.modify(list);
+        break;
 
 			case "o":
 			case "O":
-        		Commands.order(list);
-        		break;
+        Commands.order(list);
+        break;
 
 			case "r":
 			case "R":
-        		Commands.rtn(list);
-        		break;
+        Commands.rtn(list);
+        break;
 
 			case "s":
 			case "S":
-        		Commands.sell(list, queue);
-        		break;
+      	Commands.sell(list, queue);
+        break;
 
 			case "q":
 			case "Q":
-        		Commands.quit();
-        		break;
+				Commands.quit();
+        break;
 
 			default:
 				System.out.println("'" + input + "' is not a valid input, try again.");
@@ -67,9 +67,9 @@ public class Utility{
 		String[] stringArray = new String[3];
 
 		try{
-      	String line = readFile.nextLine();
+      String line = readFile.nextLine();
 			int breakIndex = line.indexOf("|");
-      	String arrayArgZero = line.substring(0, breakIndex);
+      String arrayArgZero = line.substring(0, breakIndex);
 
 			line = line.substring(breakIndex + 1);
 			breakIndex = line.indexOf("|");
@@ -95,8 +95,8 @@ public class Utility{
 			Scanner readFile = new Scanner(new FileInputStream(file));
 
       	while(readFile.hasNextLine()){
-				String[] stringArray = restoreHelper(file, readFile);
-        		queue.add(new Customer(stringArray[0], stringArray[1], stringArray[2]));
+					String[] stringArray = restoreHelper(file, readFile);
+        	queue.add(new Customer(stringArray[0], stringArray[1], stringArray[2]));
 			}
 		} catch(Exception e){
 			e.printStackTrace();
@@ -110,7 +110,7 @@ public class Utility{
 
 			while(readFile.hasNextLine()){
 				String[] stringArray = restoreHelper(file, readFile);
-        		list.add(new Movie(stringArray[0], tryParse(stringArray[1]), tryParse(stringArray[2])));
+        list.add(new Movie(stringArray[0], tryParse(stringArray[1]), tryParse(stringArray[2])));
 			}
 		} catch(Exception e){
 			e.printStackTrace();
@@ -153,7 +153,7 @@ public class Utility{
 
 		   writer.close();
 	   } catch (FileNotFoundException e){
-			e.printStackTrace();
+			 e.printStackTrace();
 	   }
   }
 }
